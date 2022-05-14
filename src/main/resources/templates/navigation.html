@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/uikit.min.css}">
+    <link rel="stylesheet" th:href="@{/css/fontawesome.min.css}">
+
+    <script th:src="@{/js/uikit.min.js}"></script>
+    <script th:src="@{/js/uikit-icons.min.js}"></script>
+    <script th:src="@{/js/fontawesome.min.js}"></script>
+</head>
+<body>
+<nav th:fragment="nav" class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            <a th:href="@{/}" class="uk-logo uk-navbar-item"><i class="fa-solid fa-pizza-slice"></i>Pizza</a>
+            <li><a th:href="@{/menu}">Menu</a></li>
+            <li><a th:href="@{/delivery}">Dostawa</a></li>
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>
