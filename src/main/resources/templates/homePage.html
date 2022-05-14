@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Market</title>
+
+    <link rel="stylesheet" th:href="@{/css/uikit.min.css}">
+    <link rel="stylesheet" th:href="@{/css/fontawesome.min.css}">
+    <script th:src="@{/js/uikit.min.js}"></script>
+    <script th:src="@{/js/uikit-icons.min.js}"></script>
+    <script th:src="@{/js/fontawesome.min.js}"></script>
+
+</head>
+<body>
+
+<div class="uk-container uk-container-large">
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <a th:href="@{/}" class="uk-logo uk-navbar-item"><i class="fa-solid fa-pizza-slice"></i>Pizza</a>
+                <li><a th:href="@{/menu}">Menu</a></li>
+                <li><a th:href="@{/delivery}">Dostawa</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="uk-section">
+        <div class="uk-container uk-container-small">
+            <div class="uk-cover-container uk-height-medium uk-margin-small">
+                <img th:src="@{/img/home1.jpg}"></img>
+            </div>
+            <article class="uk-article uk-margin-large uk-text-center">
+                <h1 class="uk-article-title">Pizza neapolitańska</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eius eligendi nemo voluptatem!
+                    Beatae cumque eos, error explicabo ipsam maiores perferendis provident quidem quo quod reiciendis
+                    repellendus voluptatibus? A ab accusantium, at culpa dolor exercitationem minima perferendis rerum
+                    saepe velit? Animi autem corporis culpa cumque dolores iure magni quae quaerat reiciendis suscipit.
+                    Alias animi assumenda commodi culpa ea, eaque eum itaque molestias mollitia nam natus non nostrum
+                    pariatur, quae quas quidem quod reprehenderit! Aliquid consequuntur ex molestias quos repellat,
+                    repudiandae? Alias architecto consectetur cumque debitis delectus et eum eveniet id incidunt, ipsum
+                    pariatur porro sapiente sed similique tempore tenetur voluptas?</p>
+                <a class="uk-button uk-button-primary uk-margin-large" th:href="@{/menu}">Sprawdź nasze menu</a>
+            </article>
+            <div class="uk-cover-container uk-height-medium uk-margin-small">
+                <img th:src="@{/img/home2.jpg}"></img>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
