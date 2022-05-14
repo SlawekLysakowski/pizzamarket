@@ -1,31 +1,41 @@
-package pl.edu.wszib.pizzamarket.data.entities;
+package pl.wszib.pizzamarket.data.entities;
+import pl.edu.wszib.pizzamarket.data.entities.OrderAddressEntity;
 
 import javax.persistence.*;
-import java.util.Set;
-
 @Entity
 @Table(name = "orders")
 public class OrderEntity {
 
     @Id
     @GeneratedValue
-    @Column (name = "id", nullable = false)
+    @Column(name = "id")
     private Long id;
-    @Column(name = "pizza_name", nullable = false)
-    private String PizzaName;
+    @Column(name = "pizza_name")
+    private String pizzaName;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_address_id")
-    private OrderAddressEntity orderAddressEntity;
-
+    private OrderAddressEntity orderAddress;
     public Long getId() {
         return id;
     }
 
-    public String getPizzaName() {
-        return PizzaName;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public OrderAddressEntity getOrderAddressEntity() {
-        return orderAddressEntity;
+    public String getPizzaName() {
+        return pizzaName;
+    }
+
+    public void setPizzaName(String pizzaName) {
+        this.pizzaName = pizzaName;
+    }
+
+    public OrderAddressEntity getOrderAddress() {
+        return orderAddress;
+    }
+
+    public void setOrderAddress(OrderAddressEntity orderAddress) {
+        this.orderAddress = orderAddress;
     }
 }

@@ -27,7 +27,7 @@
                 </td>
                 <td class="uk-width-1-6">
                     <div class="uk-text-bold uk-margin-small" th:text="|${pizza.price}zł|"></div>
-                    <a th:href="@{/menu/order/${pizza.id}(pizzaId=${pizza.id})}" class="uk-button uk-button-primary uk-border-pill uk-button-small">
+                    <a th:href="@{/menu/order/{pizzaId}(pizzaId=${pizza.id})}" class="uk-button uk-button-primary uk-border-pill uk-button-small">
                         <i class="fa-solid fa-cart-shopping"></i> Zamów
                     </a>
                 </td>
